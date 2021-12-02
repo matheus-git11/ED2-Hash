@@ -1,6 +1,6 @@
 package Hash;
 
-public class Objeto {
+public class Objeto implements Comparable<Objeto> {
     private int key;
     private String value;
 
@@ -29,8 +29,16 @@ public class Objeto {
         this.key = key;
     }
 
-    public void put(){
-    
+    @Override
+    public int compareTo(Objeto o) {
+        if(this.key == o.getKey()){
+            return 0;
+        }else if(this.key > o.getKey()){
+            return 1;
+        }else{
+            return -1;
+        }
+     
     }
 
 }

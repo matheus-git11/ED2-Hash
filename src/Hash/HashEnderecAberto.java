@@ -14,7 +14,7 @@ public class HashEnderecAberto {
             System.out.println("Inseriu");
             return;
         } else {
-            for (int i = posicao + 1; i <= valores.length; i++) {
+            for (int i = posicao + 1; i < valores.length; i++) {
                 if (valores[i] == null) {
                     valores[i] = objeto;
                     return;
@@ -31,7 +31,7 @@ public class HashEnderecAberto {
                 Objeto retorno = valores[posicao];
                 return retorno;
             } else {
-                for (int i = posicao + 1; i <= valores.length; i++) {
+                for (int i = posicao + 1; i < valores.length; i++) {
                     if (valores[i].getKey() == key) {
                         Objeto retorno = valores[i];
                         return retorno;

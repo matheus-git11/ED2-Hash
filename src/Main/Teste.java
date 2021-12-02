@@ -8,10 +8,10 @@ public class Teste {
 	 HashSimples hash = new HashSimples();
         Objeto a;
 
-        a = new Objeto(11 ,"Matheus");
+        a = new Objeto(1,"Math");
 
      
-       System.out.println("Registro"+ a.getKey() + "-" + a.getValue()+ "--"+ a.hashCode());
+       System.out.println("Registro --"+ a.getKey() + "-" + a.getValue()+ "--"+ a.hashCode());
        hash.put(a);
     }
 }

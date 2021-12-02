@@ -4,10 +4,11 @@ import Hash.HashEncadSeparado;
 import Hash.Objeto;
 
 import java.util.Scanner;
-public class TesteEncadSeparad{
-    
+
+public class TesteEncadSeparad {
+
     public static void main(String[] args) {
-       
+
         HashEncadSeparado hash = new HashEncadSeparado();
         Scanner input = new Scanner(System.in);
         int resp, key, alt;
@@ -15,14 +16,16 @@ public class TesteEncadSeparad{
         System.out.println("Bem vindo ao programa do Hash enderecamento aberto");
 
         do {
-            System.out.println("Voce deseja inserir um objeto(1) ou busca-lo?(2)");
+            System.out.println("Voce deseja inserir um objeto(1) , busca-lo?(2) ou remove-lo?(3)");
             alt = input.nextInt();
             switch (alt) {
 
                 case 1:
-                    System.out.println( "Primeiro voce irá inserir a chave(Int) para rastreio do seu objeto e depois o nome que deseja inserir(String) no caso da inserção");
+                    System.out.println(
+                            "Primeiro voce irá inserir a chave(Int) para rastreio do seu objeto e depois o nome que deseja inserir(String) no caso da inserção");
                     System.out.println("Por favor informe a chave");
-                    key = input.nextInt(); input.nextLine();
+                    key = input.nextInt();
+                    input.nextLine();
                     System.out.println("Agora informe um texto que deseja armazenar");
                     value = input.nextLine();
                     Objeto obj = new Objeto(key, value);
@@ -39,6 +42,11 @@ public class TesteEncadSeparad{
                         System.out.println("Objeto encontrado => " + find.getValue());
                     }
                     break;
+                case 3:
+                    System.out.println("Informe a numerção de rastreio para remoção");
+                    key = input.nextInt();
+                    hash.delete(key);
+                    break;
 
                 default:
                     System.out.println("Comando não reconhecido , você deve inserir 1 para inserir ou 2 para busca");
@@ -53,5 +61,4 @@ public class TesteEncadSeparad{
 
         input.close();
     }
-    }
-
+}

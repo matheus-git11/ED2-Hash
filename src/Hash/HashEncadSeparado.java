@@ -29,13 +29,13 @@ public class HashEncadSeparado {
 
     public Objeto get(int key) {
         int posicao = (key % 101) % espaco.length;
-       
+
         if (espaco[posicao] == null) {
             System.out.println("Objeto não encontrado");
             return null;
         } else {
             int tamanho = espaco[posicao].size();
-            for (int i = 0; i <= tamanho; i++) {
+            for (int i = 0; i < tamanho; i++) {
                 if (espaco[posicao].get(i).getKey() == key) {
                     return espaco[posicao].get(i);
                 }
@@ -44,5 +44,28 @@ public class HashEncadSeparado {
             return null;
 
         }
+    }
+
+    public void delete(int key) {
+        int posicao = (key % 101) % espaco.length;
+
+        if (espaco[posicao] == null) {
+            System.out.println("Objeto não encontrado");
+
+        } else if (espaco[posicao].isEmpty()) {
+            System.out.println("Objeto não encontrado");
+        } else {
+            int tamanho = espaco[posicao].size();
+            for (int i = 0; i < tamanho; i++) {
+                if (espaco[posicao].get(i).getKey() == key) {
+                    espaco[posicao].remove(i);
+                    System.out.println("Objeto removido");
+                    return;
+                }
+            }
+            System.out.println("nao achado");
+
+        }
+
     }
 }

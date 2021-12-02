@@ -15,6 +15,7 @@ public class Teste {
        hash.put(a);
        Objeto b = hash.get(1);
        System.out.println(b.getValue());
+       
     }
 }
  

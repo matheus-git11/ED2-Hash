@@ -8,7 +8,7 @@ public class HashSimples {
     }
 
     public void put(Objeto objeto) {
-        int posicao = (objeto.getKey()%101)%100;
+        int posicao = (objeto.getKey()%101)%valores.length;
         if (valores[posicao] == null) {
             valores[posicao] = objeto;
             System.out.println("Inseriu");
@@ -18,7 +18,7 @@ public class HashSimples {
     public Objeto get(int key) {
         Objeto novo = new Objeto();
         novo.setKey(key);
-        int posicao = (novo.getKey()%101)%100;
+        int posicao = (novo.getKey()%101)%valores.length;
         return valores[posicao];
         
     }

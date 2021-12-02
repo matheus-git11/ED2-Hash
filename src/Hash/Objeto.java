@@ -26,7 +26,5 @@ public void setValue(String value) {
 public void setKey(int key) {
     this.key = key;
 }
- public int hashCode(){
-     return key % 100;
- }
+
 }

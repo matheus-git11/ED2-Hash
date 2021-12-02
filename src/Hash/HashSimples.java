@@ -8,16 +8,17 @@ public class HashSimples {
     }
 
     public void put(Objeto objeto) {
-        int posicao = objeto.hashCode();
+        int posicao = (objeto.getKey()%101)%100;
         if (valores[posicao] == null) {
             valores[posicao] = objeto;
+            System.out.println("Inseriu");
         }
     }
 
     public Objeto get(int key) {
         Objeto novo = new Objeto();
         novo.setKey(key);
-        int posicao = novo.hashCode();
+        int posicao = (novo.getKey()%101)%100;
         return valores[posicao];
         
     }

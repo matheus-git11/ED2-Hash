@@ -11,8 +11,10 @@ public class Teste {
         a = new Objeto(1,"Math");
 
      
-       System.out.println("Registro --"+ a.getKey() + "-" + a.getValue()+ "--"+ a.hashCode());
+       System.out.println("Registro --"+ a.getKey()+"--"+a.getValue());
        hash.put(a);
+       Objeto b = hash.get(1);
+       System.out.println(b.getValue());
     }
 }
  

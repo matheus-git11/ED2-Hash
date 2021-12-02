@@ -29,4 +29,8 @@ public class Objeto {
         this.key = key;
     }
 
+    public void put(){
+    
+    }
+
 }

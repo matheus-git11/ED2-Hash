@@ -16,11 +16,19 @@ public class HashSimples {
     }
 
     public Objeto get(int key) {
-        Objeto novo = new Objeto();
-        novo.setKey(key);
-        int posicao = (novo.getKey()%101)%valores.length;
+        int posicao = (key%101)%valores.length;
         return valores[posicao];
         
+    }
+
+    public void delete(int key){
+        int posicao = (key%101)%valores.length; 
+         if(valores[posicao]==null){
+             System.out.println("Valor não achado");
+         }else{
+             valores[posicao]=null;
+             System.out.println("Valor Removido");
+         }
     }
 
 }
